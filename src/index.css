@@ -1,0 +1,292 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  background-color: antiquewhite;
+  font-family: 'karla', sans-serif;
+}
+.App{
+  position: relative;
+  margin: auto;
+  margin-top: 50px;
+  width: 500px;
+  height: 550px;
+  background-color: black
+}
+.App-div{
+  position: absolute;
+  top: 25px;
+  left: 20px;
+  right: 20px;
+  bottom: 25px;
+  background-color: rgb(242, 241, 241);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.dice-div{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(2 ,1fr);
+  width: 100%;
+  height: 80px;
+  gap: 20px;
+  margin-left: 15px;
+}
+.button-Die{
+  height: 40px;
+  background-color: white;
+  border: none;
+  width: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 3px rgb(222, 222, 222);
+  border-radius: 5px;
+}
+
+.rollDiceBtn{
+  position: absolute;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  height: 40px;
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 70%;
+  left: 40%;
+  font-family: 'karla', sans-serif;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+}
+.rollDiceBtn:focus{
+  outline: none;
+}
+.rollDiceBtn:active{
+  box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
+}
+.header{
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1{
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.header-p{
+  color: rgb(0, 0, 0);
+}
+.confetti{
+  width: 450px;
+  height: 500px;
+}
+.diceBtnDiv{
+  height: 40px;
+  background-color: white;
+  border: none;
+  width: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: 0px 3px rgb(222, 222, 222);
+  border-radius: 5px;
+  box-shadow: 0px 3px rgb(222, 222, 222);
+}
+.die1{
+  visibility: hidden;
+  position: relative;
+}
+.die2{
+  visibility: hidden;
+  position: relative;
+}
+.die3{
+  visibility: hidden;
+  position: relative;
+}
+.die4{
+  visibility: hidden;
+  position: relative;
+}
+.die5{
+  visibility: hidden;
+  position: relative;
+}
+.die6{
+  visibility: hidden;
+  position: relative;
+}
+.die1::after{
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "\2022";
+  height: 40px;
+  border: none;
+  width: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.die2::after{
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "\2022\2022";
+  height: 40px;
+  border: none;
+  width: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.die3::after{
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "\2022\2022\2022";
+  height: 40px;
+  border: none;
+  width: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  writing-mode: sid;
+}
+.die4::after{
+  visibility: visible;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  content: "\2022\2022\2022\2022";
+  width: 30px;
+  font-size: 30px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  line-height: 10px;
+
+}
+.die5::after{
+  visibility: visible;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  content: '\2022\2022\2022\2022\2022';
+  width: 30px;
+  font-size: 30px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  line-height: 10px;
+}
+
+.die6::after{
+  visibility: visible;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  right: 0%;
+  left: 0%;
+  content: '\2022\2022\2022\2022\2022\2022';
+  width: 40px;
+  font-size: 30px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  line-height: 10px;
+}
+.counter{
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  font-size: 20px;
+  border: none;
+  height: 30px;
+  border-radius: 6px;
+}
+.held-Die{
+  background-color: #59E391;
+  z-index: 100;
+}
+.timer-p{
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  color: black;
+  font-size: 20px;
+  border: none;
+  height: 30px;
+  padding: 10px;
+}
+.resetter{
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  border: none;
+  height: 30px;
+  border-radius: 6px;
+}
+.timer-p2{
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  color: black;
+  font-size: 20px;
+  border: none;
+  height: 30px;
+  padding: 10px;
+}
